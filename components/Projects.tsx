@@ -112,17 +112,6 @@ const Projects = () => {
                     <Code2 size={16} />
                     View Code
                   </a>
-                  {project.live && (
-                    <a
-                      href={project.live}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="flex items-center gap-2 px-4 py-2 rounded-lg text-sm font-semibold text-white bg-accent-blue hover:bg-accent-blue/90 transition-all duration-300"
-                    >
-                      <ExternalLink size={16} />
-                      Live Demo
-                    </a>
-                  )}
                 </div>
               </div>
 
