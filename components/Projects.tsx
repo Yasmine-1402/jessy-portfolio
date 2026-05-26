@@ -2,7 +2,7 @@
 
 import { motion } from 'framer-motion';
 import { projectsData } from '@/data/content';
-import { Code2, ExternalLink, Star } from 'lucide-react';
+import { Code2, Star } from 'lucide-react';
 
 const Projects = () => {
   const containerVariants = {
