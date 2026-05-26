@@ -164,6 +164,31 @@ export const skillsData = {
 export const projectsData = [
   {
     id: 1,
+    title: 'Skill-Barter Platform',
+    category: 'Personal Project',
+    badge: 'Full-Stack',
+    description: 'Scalable skill exchange platform using multi-hop Karma Chains for intelligent user matching.',
+    longDescription:
+      'Skill-Barter is a sophisticated platform that enables users to exchange skills through Karma Chains — multi-hop matching where User A can teach User B who can teach User C, creating closed cycles of skill exchange. Built with Spring Boot 3.x and PostgreSQL, the system implements a recursive matching algorithm using PostgreSQL Recursive Common Table Expressions (CTEs) to find optimal skill exchange paths at the database level. The platform includes async processing with RabbitMQ, comprehensive Swagger/OpenAPI documentation, and supports complex graph traversal for finding multi-hop exchanges up to configurable depth limits. This project demonstrates deep expertise in backend architecture, complex SQL optimization, and scalable system design.',
+    technologies: ['Java', 'Spring Boot 3.x', 'PostgreSQL 15+', 'RabbitMQ', 'OpenAPI/Swagger', 'JPA', 'Maven'],
+    github: 'https://github.com/Yasmine-1402/Skill-Barter',
+    keyFeatures: [
+      'Recursive CTE algorithm for multi-hop skill matching',
+      'Karma Chain discovery with cycle prevention',
+      'Asynchronous match processing with RabbitMQ',
+      'PostgreSQL-level optimization for graph traversal',
+      'OpenAPI/Swagger auto-documentation',
+      'Role-based access control and user management',
+    ],
+    impact: 'Intelligent skill exchange matching platform',
+    impact_metric: 'Processes complex chains up to configurable depth',
+    myRole: 'Designer & Developer',
+    date: 'Jan 2026',
+    status: 'Active',
+    thinking: 'Key insight: Database-level graph algorithms (recursive CTEs) provide atomic consistency and eliminate N+1 problems—sometimes the best optimization is choosing the right query layer.'
+  },
+  {
+    id: 2,
     title: 'NMS Orange',
     category: 'Personal Project',
     badge: 'Full-Stack',
@@ -186,7 +211,7 @@ export const projectsData = [
     thinking: 'Key learning: Authorization complexity requires careful system design—every permission check must be intentional and auditable.'
   },
   {
-    id: 2,
+    id: 3,
     title: 'StudentSmart',
     category: 'Personal Project',
     badge: 'Desktop App',
@@ -209,7 +234,7 @@ export const projectsData = [
     thinking: 'Insight: Educational software requires understanding the learner\'s perspective—simplicity and clarity trump feature richness.'
   },
   {
-    id: 3,
+    id: 4,
     title: 'Sentiment Analysis Engine',
     category: 'Personal Project',
     badge: 'ML/AI',
@@ -232,7 +257,7 @@ export const projectsData = [
     thinking: 'Key insight: Garbage in, garbage out. Data quality and preprocessing determined model success more than algorithm choice.'
   },
   {
-    id: 4,
+    id: 5,
     title: 'AURA Health Companion',
     category: 'Contributed Project',
     badge: 'Mobile',
@@ -264,7 +289,7 @@ export const projectsData = [
     thinking: 'Learning: Healthcare technology requires balancing innovation with user trust—data security and accuracy are non-negotiable.'
   },
   {
-    id: 5,
+    id: 6,
     title: 'AURA Health Companion Desktop',
     category: 'Contributed Project',
     badge: 'Desktop',
@@ -295,7 +320,7 @@ export const projectsData = [
     thinking: 'Desktop development taught me: responsive design is different on desktop—embrace the extra space, but respect user workflows.'
   },
   {
-    id: 6,
+    id: 7,
     title: 'CYPHERNEST',
     category: 'Personal Project',
     badge: 'Cybersecurity',
