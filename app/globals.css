@@ -1,0 +1,171 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --color-accent-blue: #1967d2;
+  --color-accent-green: #0d9488;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  @apply bg-dark-950 text-white font-sans;
+  background-image:
+    radial-gradient(at 20% 50%, rgba(25, 103, 210, 0.08) 0px, transparent 50%),
+    radial-gradient(at 80% 80%, rgba(13, 148, 136, 0.08) 0px, transparent 50%),
+    radial-gradient(at 40% 0%, rgba(25, 103, 210, 0.05) 0px, transparent 50%);
+}
+
+.glass {
+  @apply bg-white/5 backdrop-blur-xl border border-white/10 rounded-xl;
+}
+
+.glass-md {
+  @apply bg-white/5 backdrop-blur-md border border-white/5 rounded-lg;
+}
+
+.gradient-text {
+  @apply bg-gradient-to-r from-accent-blue via-accent-green to-accent-blue bg-clip-text text-transparent;
+}
+
+.glow-border {
+  @apply relative border border-transparent rounded-lg;
+  background: linear-gradient(135deg, rgba(25, 103, 210, 0.1), rgba(13, 148, 136, 0.1)) border-box;
+  border-image: linear-gradient(135deg, rgba(25, 103, 210, 0.3), rgba(13, 148, 136, 0.3)) 1;
+}
+
+.hover-glow {
+  @apply transition-all duration-300 hover:shadow-lg hover:shadow-accent-blue/20;
+}
+
+/* Accent color utilities */
+.text-accent-blue {
+  @apply text-[#1967d2];
+}
+
+.text-accent-green {
+  @apply text-[#0d9488];
+}
+
+.bg-accent-blue {
+  @apply bg-[#1967d2];
+}
+
+.bg-accent-blue\/5 {
+  @apply bg-[rgb(25,103,210,0.05)];
+}
+
+.bg-accent-blue\/10 {
+  @apply bg-[rgb(25,103,210,0.1)];
+}
+
+.bg-accent-blue\/20 {
+  @apply bg-[rgb(25,103,210,0.2)];
+}
+
+.bg-accent-green\/5 {
+  @apply bg-[rgb(13,148,136,0.05)];
+}
+
+.bg-accent-green\/10 {
+  @apply bg-[rgb(13,148,136,0.1)];
+}
+
+.bg-accent-green\/20 {
+  @apply bg-[rgb(13,148,136,0.2)];
+}
+
+.border-accent-blue {
+  @apply border-[#1967d2];
+}
+
+.border-accent-blue\/20 {
+  @apply border-[rgb(25,103,210,0.2)];
+}
+
+.border-accent-blue\/30 {
+  @apply border-[rgb(25,103,210,0.3)];
+}
+
+.border-accent-green {
+  @apply border-[#0d9488];
+}
+
+.border-accent-green\/20 {
+  @apply border-[rgb(13,148,136,0.2)];
+}
+
+.border-accent-green\/30 {
+  @apply border-[rgb(13,148,136,0.3)];
+}
+
+.fade-in-up {
+  animation: fadeInUp 0.6s ease-out;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-in-left {
+  animation: fadeInLeft 0.6s ease-out;
+}
+
+@keyframes fadeInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.fade-in-right {
+  animation: fadeInRight 0.6s ease-out;
+}
+
+@keyframes fadeInRight {
+  from {
+    opacity: 0;
+    transform: translateX(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Scrollbar Styling */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-dark-900;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-accent-blue rounded-full;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  @apply bg-accent-blue;
+}
