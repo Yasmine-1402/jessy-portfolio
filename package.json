@@ -20,7 +20,7 @@
     "@types/react-dom": "^19.0.0",
     "@types/node": "^20.0.0",
     "next-themes": "^0.2.1",
-    "lucide-react": "^0.303.0"
+    "lucide-react": "^0.408.0"
   },
   "devDependencies": {
     "autoprefixer": "^10.4.16",
