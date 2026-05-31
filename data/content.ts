@@ -342,6 +342,31 @@ export const projectsData = [
     status: 'Completed',
     thinking: 'Insight: Understanding cryptography at the implementation level reveals why modern algorithms are so carefully designed—elegance meets necessity.'
   },
+  {
+    id: 8,
+    title: 'Express Cart Shop',
+    category: 'Personal Project',
+    badge: 'Full-Stack',
+    description: 'Production-hardened e-commerce platform with multi-gateway payments and cloud database integration.',
+    longDescription:
+      'Express Cart Shop is a heavily customized and production-hardened version of the expressCart shopping cart platform. I migrated the entire database layer to MongoDB Atlas with custom migration scripts, integrated multiple payment gateways (Stripe, PayPal, Paymob/Instapay, and Cash on Delivery), and implemented comprehensive security hardening including environment variable management and git history cleansing. The project demonstrates real-world deployment skills—from database migration and payment processing to production security best practices.',
+    technologies: ['Node.js', 'Express.js', 'MongoDB Atlas', 'Stripe', 'PayPal', 'Paymob', 'JavaScript', 'EJS'],
+    github: 'https://github.com/Yasmine-1402/express-cart-shop',
+    keyFeatures: [
+      'MongoDB Atlas cloud database integration with migration scripts',
+      'Multi-gateway payment processing (Stripe, PayPal, Paymob/Instapay, COD)',
+      'Production security hardening and environment variable management',
+      'Database connection testing and integrity verification',
+      'Git history cleansing for credential protection',
+      'Region-specific payment method support',
+    ],
+    impact: 'Production-ready e-commerce platform',
+    impact_metric: 'Multiple payment gateways integrated',
+    myRole: 'Developer',
+    date: 'May 2026',
+    status: 'Active',
+    thinking: 'Key learning: Production deployment is where theory meets reality—security, payment processing, and database migration require meticulous attention to detail.'
+  },
 ];
 
 export const currentFocus = {
