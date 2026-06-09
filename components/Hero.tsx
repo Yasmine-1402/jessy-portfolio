@@ -1,7 +1,7 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import { ArrowDown, Code2, Download } from 'lucide-react';
+import { ArrowDown, Code2, Download, Linkedin } from 'lucide-react';
 import Link from 'next/link';
 import Image from 'next/image';
 import { profileData } from '@/data/content';
@@ -130,6 +130,15 @@ const Hero = () => {
               >
                 <Code2 size={18} />
                 GitHub
+              </a>
+              <a
+                href={profileData.linkedin}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="px-6 py-3 border border-white/20 text-white font-semibold rounded-full hover:border-white/40 hover:bg-white/5 transition-all duration-300 flex items-center gap-2 backdrop-blur-sm"
+              >
+                <Linkedin size={18} />
+                LinkedIn
               </a>
               <a
                 href={profileData.resume}
