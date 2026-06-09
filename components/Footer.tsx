@@ -26,7 +26,7 @@ const Footer = () => {
     <footer className="bg-dark-900/50 backdrop-blur-xl border-t border-white/10 py-16 px-4 sm:px-6 lg:px-8">
       <div className="max-w-6xl mx-auto">
         {/* Main Footer Content */}
-        <div className="grid md:grid-cols-4 gap-8 mb-12">
+        <div className="grid md:grid-cols-3 gap-8 mb-12">
           {/* Brand */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -64,42 +64,11 @@ const Footer = () => {
             </ul>
           </motion.div>
 
-          {/* Connect */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.2 }}
-            viewport={{ once: true }}
-          >
-            <h4 className="font-bold text-white mb-4">Connect</h4>
-            <ul className="space-y-2">
-              <li>
-                <a
-                  href={`mailto:${profileData.email}`}
-                  className="text-sm text-gray-400 hover:text-accent-blue transition-colors"
-                >
-                  Email
-                </a>
-              </li>
-              <li>
-                <a
-                  href={`tel:${profileData.phone}`}
-                  className="text-sm text-gray-400 hover:text-accent-blue transition-colors"
-                >
-                  Phone
-                </a>
-              </li>
-              <li>
-                <span className="text-sm text-gray-400">{profileData.location}</span>
-              </li>
-            </ul>
-          </motion.div>
-
           {/* Stats */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.3 }}
+            transition={{ duration: 0.6, delay: 0.2 }}
             viewport={{ once: true }}
           >
             <h4 className="font-bold text-white mb-4">Highlights</h4>

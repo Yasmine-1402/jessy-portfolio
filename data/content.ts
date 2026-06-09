@@ -1,8 +1,8 @@
 export const profileData = {
   name: 'Yasmine Shehata',
   title: 'Software Engineer & Community Leader',
-  tagline: 'Building thoughtful software that matters',
-  subtitle: 'Computer Science student passionate about creating impactful products. GDG Leader. Builder. Collaborator.',
+  tagline: 'Software Engineering Student | GDG on Campus Lead | Building AI-powered and scalable systems impacting students and communities.',
+  subtitle: 'Led 80+ members • Mentored 20+ students • Impacted 250+ community members • 9+ projects built',
   email: 'yshehata047@gmail.com',
   phone: '+201117366262',
   location: 'Cairo, Egypt',
@@ -11,12 +11,11 @@ export const profileData = {
   linkedin: 'https://www.linkedin.com/in/yasmine-shehata-97846030a/',
   portfolio: 'https://yasmine-portfolio.vercel.app',
   resume: '/Yasmine_Shehata_Resume.pdf',
-  description: `I'm a Computer Science student at Arab Academy, driven by the mission to build software that solves real problems. 
-I blend technical depth with creative thinking—whether architecting full-stack applications, mentoring developer communities, 
-or exploring AI-driven solutions. My approach is intentional: I care about code quality, user experience, and the people behind the products.`,
-  whyIBuild: `I believe technology should be purposeful. Every project I work on teaches me something about how systems scale, 
-how teams collaborate, and how software shapes human experience. I'm actively exploring how AI can augment software engineering, 
-and I'm passionate about building the next generation of engineers through mentorship and community.`,
+  description: `I'm a Software Engineering student at Arab Academy who builds products with real users, scale, and community impact in mind.
+I combine backend depth, frontend clarity, and AI curiosity with leadership experience from developer communities, internships, and hands-on projects.
+I care about solving the right problem, shipping reliable systems, and making the engineering experience better for the people around me.`,
+  whyIBuild: `I build because I like turning technical work into visible value. That means shipping scalable systems, improving user experience, and helping other students grow through mentorship and community leadership.
+I am especially interested in AI-powered products, full-stack architecture, and the practical craft of building software that lasts.`,
 };
 
 export const educationData = [
@@ -126,38 +125,33 @@ export const experienceData = [
 ];
 
 export const skillsData = {
-  languages: [
-    { name: 'Java', level: 90, icon: '☕' },
-    { name: 'Python', level: 85, icon: '🐍' },
-    { name: 'JavaScript/TypeScript', level: 88, icon: '⚡' },
-    { name: 'C/C++', level: 80, icon: '🔧' },
-    { name: 'SQL', level: 85, icon: '🗄️' },
+  proficient: [
+    { name: 'Java', icon: '☕' },
+    { name: 'Spring Boot', icon: '🍃' },
+    { name: 'React', icon: '⚛️' },
+    { name: 'PostgreSQL', icon: '🗄️' },
   ],
-  frameworks: [
-    { name: 'React', level: 90, icon: '⚛️' },
-    { name: 'Spring Boot', level: 82, icon: '🍃' },
-    { name: 'JavaFX', level: 85, icon: '🎨' },
-    { name: 'Bootstrap', level: 88, icon: '📱' },
-    { name: 'Next.js', level: 87, icon: '▲' },
+  familiar: [
+    { name: 'Flutter', icon: '📱' },
+    { name: 'Supabase', icon: '⚡' },
+    { name: 'Next.js', icon: '▲' },
+    { name: 'JavaFX', icon: '🎨' },
+    { name: 'Python', icon: '🐍' },
+    { name: 'TypeScript', icon: '📘' },
   ],
-  databases: [
-    { name: 'MySQL', level: 85, icon: '🐬' },
-    { name: 'SQL', level: 88, icon: '📊' },
-    { name: 'Database Design', level: 82, icon: '🏗️' },
+  supporting: [
+    { name: 'C/C++', icon: '🔧' },
+    { name: 'MySQL', icon: '🐬' },
+    { name: 'Git/GitHub', icon: '🐙' },
+    { name: 'Figma', icon: '🎭' },
+    { name: 'Postman', icon: '📮' },
   ],
-  tools: [
-    { name: 'Git/GitHub', level: 90, icon: '🐙' },
-    { name: 'VS Code', level: 92, icon: '💻' },
-    { name: 'IntelliJ IDEA', level: 88, icon: '🧠' },
-    { name: 'Figma', level: 85, icon: '🎭' },
-    { name: 'Postman', level: 87, icon: '📮' },
-  ],
-  specializations: [
-    { name: 'Web Application Development', level: 90 },
-    { name: 'Frontend Development', level: 89 },
-    { name: 'Mobile Application Development', level: 80 },
-    { name: 'Network Management', level: 75 },
-    { name: 'UI/UX Design', level: 85 },
+  focusAreas: [
+    'Full-Stack Development',
+    'AI-Augmented Products',
+    'UI/UX Design',
+    'Scalable Backend Systems',
+    'Community Leadership',
   ],
 };
 
@@ -192,9 +186,9 @@ export const projectsData = [
     title: 'NMS Orange',
     category: 'Personal Project',
     badge: 'Full-Stack',
-    description: 'Centralized Internal Management System for IT operations and infrastructure.',
+    description: 'Centralized Internal Management System for IT operations and infrastructure, now hosted on Orange Egypt servers.',
     longDescription:
-      'NMS Orange is an enterprise-grade management platform designed to streamline IT operations. Built with Spring Boot and PostgreSQL, the system provides role-based access control, comprehensive asset tracking, personnel management, and a sophisticated ticketing system. I architected a JWT-based authentication layer and designed RESTful APIs that handle complex authorization workflows with admin approval workflows.',
+      'NMS Orange is an enterprise-grade management platform designed to streamline IT operations. Built with Spring Boot and PostgreSQL, the system provides role-based access control, comprehensive asset tracking, personnel management, and a sophisticated ticketing system. It is now hosted on Orange Egypt servers. I architected a JWT-based authentication layer and designed RESTful APIs that handle complex authorization workflows with admin approval workflows.',
     technologies: ['Java', 'Spring Boot', 'PostgreSQL', 'JWT', 'JavaScript', 'HTML5', 'CSS3'],
     github: 'https://github.com/Yasmine-1402/nms_oranegge',
     keyFeatures: [
@@ -203,7 +197,7 @@ export const projectsData = [
       'Vendor and application inventory management',
       'Advanced ticketing and knowledge base system',
     ],
-    impact: 'Enterprise IT management platform',
+    impact: 'Enterprise IT management platform hosted on Orange Egypt servers',
     impact_metric: 'Manages multi-department operations',
     myRole: 'Lead Developer',
     date: 'Aug 2025',
@@ -425,8 +419,8 @@ export const leadershipTimeline = [
     period: 'Ongoing (Sept 2024 - Present)',
     highlight: 'Leading a vibrant developer community',
     impact: [
-      'Mentoring 100+ student developers',
-      'Organizing 15+ technical workshops and hackathons',
+      'Mentoring 250+ student and community members',
+      'Organizing 22+ technical workshops, events, and hackathons',
       'Building a collaborative culture that values learning and growth',
       'Connecting peers with industry mentors and opportunities',
     ],
@@ -459,9 +453,9 @@ export const collaborationProjects = [
 export const achievementsData = [
   {
     title: 'Community Leadership',
-    description: 'Leading 100+ developers in GDG community',
+    description: 'Leading 250+ community members through GDG on Campus',
     icon: '👥',
-    impact: '15+ events organized',
+    impact: '22+ workshops and events organized',
   },
   {
     title: 'Full-Stack Engineering',
@@ -485,11 +479,11 @@ export const achievementsData = [
     title: 'Mentorship',
     description: 'Actively mentoring junior developers',
     icon: '📖',
-    impact: 'Dozens of developers guided',
+    impact: '20+ students mentored directly',
   },
   {
     title: 'Professional Experience',
-    description: '3+ internships at tech companies',
+    description: 'Internship experience across Orange and CIB',
     icon: '💼',
     impact: 'Real-world engineering exposure',
   },

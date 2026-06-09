@@ -86,32 +86,6 @@ const Experience = () => {
         {/* Internships & Freelance */}
         {renderExperienceSection('💼 Experience & Internships', internships)}
 
-        {/* Timeline Info */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.3 }}
-          viewport={{ once: true }}
-          className="mt-16 pt-12 border-t border-white/10"
-        >
-          <div className="grid md:grid-cols-3 gap-6">
-            {[
-              { icon: '⭐', label: 'Impact-Driven', desc: 'Focused on creating meaningful solutions' },
-              { icon: '🚀', label: 'Growth-Oriented', desc: 'Continuously learning and improving' },
-              { icon: '🤝', label: 'Collaborative', desc: 'Strong teamwork and mentorship skills' },
-            ].map((item, idx) => (
-              <motion.div
-                key={idx}
-                whileHover={{ y: -5 }}
-                className="glass-md p-6 rounded-lg text-center"
-              >
-                <p className="text-4xl mb-3">{item.icon}</p>
-                <h4 className="text-lg font-bold text-white mb-2">{item.label}</h4>
-                <p className="text-sm text-gray-400">{item.desc}</p>
-              </motion.div>
-            ))}
-          </div>
-        </motion.div>
       </div>
     </section>
   );

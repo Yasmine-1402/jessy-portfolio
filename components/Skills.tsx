@@ -17,31 +17,31 @@ const Skills = () => {
     visible: { opacity: 1, scale: 1, transition: { duration: 0.4 } },
   };
 
-  const SkillBar = ({
-    name,
-    level,
-    icon,
+  const SkillChipCard = ({
+    title,
+    items,
+    helper,
   }: {
-    name: string;
-    level: number;
-    icon?: string;
+    title: string;
+    items: Array<{ name: string; icon?: string }>;
+    helper: string;
   }) => (
-    <motion.div variants={itemVariants} className="mb-6">
-      <div className="flex items-center justify-between mb-2">
-        <div className="flex items-center gap-2">
-          {icon && <span className="text-2xl">{icon}</span>}
-          <span className="font-semibold text-white text-sm">{name}</span>
-        </div>
-        <span className="text-xs text-accent-blue font-bold">{level}%</span>
-      </div>
-      <div className="w-full h-2 bg-dark-800 rounded-full overflow-hidden">
-        <motion.div
-          initial={{ width: 0 }}
-          whileInView={{ width: `${level}%` }}
-          transition={{ duration: 1, delay: 0.2 }}
-          viewport={{ once: true }}
-          className="h-full bg-gradient-to-r from-accent-blue to-accent-green rounded-full"
-        />
+    <motion.div
+      variants={itemVariants}
+      className="glass-md p-8 rounded-2xl border border-white/10 bg-white/5"
+    >
+      <h3 className="text-xl font-bold text-white mb-2">{title}</h3>
+      <p className="text-sm text-gray-400 mb-6">{helper}</p>
+      <div className="flex flex-wrap gap-3">
+        {items.map((skill) => (
+          <span
+            key={skill.name}
+            className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-dark-900/70 px-4 py-2 text-sm text-white"
+          >
+            {skill.icon && <span>{skill.icon}</span>}
+            {skill.name}
+          </span>
+        ))}
       </div>
     </motion.div>
   );
@@ -60,73 +60,39 @@ const Skills = () => {
           <h2 className="text-4xl sm:text-5xl font-bold mb-4">
             <span className="gradient-text">Skills & Expertise</span>
           </h2>
-          <p className="text-gray-400 text-lg">Technologies and tools I work with</p>
+          <p className="text-gray-400 text-lg">A clearer view of what I use often, what I can ship with, and what I’m actively expanding</p>
         </motion.div>
 
         {/* Skills Grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-          {/* Programming Languages */}
+        <div className="grid gap-8 lg:grid-cols-2">
+          <SkillChipCard
+            title="Proficient"
+            helper="Technologies I use to build and ship confidently"
+            items={skillsData.proficient}
+          />
+          <SkillChipCard
+            title="Familiar"
+            helper="Tools and frameworks I can ramp into quickly"
+            items={skillsData.familiar}
+          />
+          <SkillChipCard
+            title="Supporting Tools"
+            helper="The rest of the stack I use to stay productive"
+            items={skillsData.supporting}
+          />
           <motion.div
-            variants={containerVariants}
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true }}
-            className="glass-md p-8 rounded-lg"
+            variants={itemVariants}
+            className="glass-md p-8 rounded-2xl border border-white/10 bg-gradient-to-br from-accent-blue/10 to-transparent"
           >
-            <h3 className="text-xl font-bold text-white mb-6 flex items-center gap-2">
-              <span>🔤</span> Languages
-            </h3>
-            {skillsData.languages.map((skill) => (
-              <SkillBar key={skill.name} {...skill} />
-            ))}
-          </motion.div>
-
-          {/* Frameworks */}
-          <motion.div
-            variants={containerVariants}
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true }}
-            className="glass-md p-8 rounded-lg"
-          >
-            <h3 className="text-xl font-bold text-white mb-6 flex items-center gap-2">
-              <span>🏗️</span> Frameworks
-            </h3>
-            {skillsData.frameworks.map((skill) => (
-              <SkillBar key={skill.name} {...skill} />
-            ))}
-          </motion.div>
-
-          {/* Databases */}
-          <motion.div
-            variants={containerVariants}
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true }}
-            className="glass-md p-8 rounded-lg"
-          >
-            <h3 className="text-xl font-bold text-white mb-6 flex items-center gap-2">
-              <span>🗄️</span> Databases
-            </h3>
-            {skillsData.databases.map((skill) => (
-              <SkillBar key={skill.name} {...skill} />
-            ))}
-          </motion.div>
-
-          {/* Tools */}
-          <motion.div
-            variants={containerVariants}
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true }}
-            className="glass-md p-8 rounded-lg"
-          >
-            <h3 className="text-xl font-bold text-white mb-6 flex items-center gap-2">
-              <span>🛠️</span> Tools
-            </h3>
-            {skillsData.tools.map((skill) => (
-              <SkillBar key={skill.name} {...skill} />
-            ))}
+            <h3 className="text-xl font-bold text-white mb-2">Focus Areas</h3>
+            <p className="text-sm text-gray-400 mb-6">The problems and product themes I’m leaning into right now</p>
+            <div className="flex flex-wrap gap-3">
+              {skillsData.focusAreas.map((area) => (
+                <span key={area} className="rounded-full border border-accent-blue/20 bg-accent-blue/10 px-4 py-2 text-sm text-white">
+                  {area}
+                </span>
+              ))}
+            </div>
           </motion.div>
         </div>
       </div>

@@ -36,7 +36,7 @@ const Projects = () => {
             Featured
             <span className="block text-accent-blue">work & projects</span>
           </h2>
-          <p className="text-gray-400 text-lg max-w-2xl">Handcrafted software across full-stack, AI, and team collaboration. Each project represents intentional design and technical depth.</p>
+          <p className="text-gray-400 text-lg max-w-2xl">Handcrafted software across full-stack, AI, and team collaboration. Each project represents intentional design and technical depth, with deployed work highlighted where available.</p>
         </motion.div>
 
         {/* Projects Grid - Editorial Layout */}
@@ -94,11 +94,8 @@ const Projects = () => {
                 </div>
 
                 {/* Impact Highlight */}
-                <div className="mb-8 p-4 rounded-lg border border-accent-blue border-opacity-30 bg-accent-blue bg-opacity-5">
-                  <p className="text-sm text-gray-300">
-                    <span className="font-semibold text-accent-blue">Impact: </span>
-                    {project.impact}
-                  </p>
+                <div className="mb-8 p-4 rounded-lg border border-white border-opacity-10 bg-white bg-opacity-5">
+                  <p className="text-sm text-gray-300">{project.impact}</p>
                 </div>
 
                 {/* Action Links */}
@@ -150,15 +147,25 @@ const Projects = () => {
           viewport={{ once: true }}
           className="mt-24 pt-16 border-t border-white border-opacity-10 text-center"
         >
-          <p className="text-gray-400 text-lg mb-6">Explore more on my GitHub</p>
-          <a
-            href="https://github.com/Yasmine-1402"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-block px-8 py-3 rounded-lg bg-accent-blue text-white font-semibold hover:bg-accent-blue/90 transition-all duration-300 hover:shadow-lg"
-          >
-            View All Projects
-          </a>
+          <p className="text-gray-400 text-lg mb-6">Explore more on GitHub or open the live portfolio demo</p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <a
+              href="https://github.com/Yasmine-1402"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-block px-8 py-3 rounded-lg bg-accent-blue text-white font-semibold hover:bg-accent-blue/90 transition-all duration-300 hover:shadow-lg"
+            >
+              View All Projects
+            </a>
+            <a
+              href="https://yasmine-portfolio.vercel.app"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-block px-8 py-3 rounded-lg border border-white/20 text-white font-semibold hover:border-white/40 hover:bg-white/5 transition-all duration-300"
+            >
+              Live Portfolio Demo
+            </a>
+          </div>
         </motion.div>
       </div>
     </section>
